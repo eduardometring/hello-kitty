@@ -1,0 +1,62 @@
+  body {
+    margin: 0;
+    background: #ffd1e8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    overflow: hidden;
+  }
+
+  #game-container {
+    position: relative;
+    width: 90vw;
+    max-width: 640px;
+    aspect-ratio: 16/9;
+  }
+
+  canvas {
+    width: 100%;
+    height: 100%;
+    display: block;
+    background: linear-gradient(#9bd3ff, #eaf7ff);
+    border: 4px solid #ff7fbf;
+    border-radius: 12px;
+  }
+
+  .hud {
+    color: #7a1f5c;
+    margin-top: 4px;
+    text-align: center;
+    font-size: 16px;
+  }
+
+  /* Botões mobile */
+  #mobile-controls {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    pointer-events: none;
+  }
+
+  /* Esquerda e direita juntos no canto inferior esquerdo */
+  #leftBtn { position: absolute; left: 10px; bottom: 10px; }
+  #rightBtn { position: absolute; left: 80px; bottom: 10px; }
+
+  /* Pulo no canto inferior direito */
+  #upBtn { position: absolute; right: 10px; bottom: 10px; }
+
+  #mobile-controls button {
+    width: 60px;
+    height: 60px;
+    font-size: 24px;
+    border: none;
+    border-radius: 12px;
+    background: #ff7fbf88;
+    color: #fff;
+    pointer-events: auto;
+  }
+
+  #mobile-controls button:active { background: #ff4fa3; }
