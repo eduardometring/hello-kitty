@@ -75,8 +75,13 @@ function rectsOverlap(a,b){ return a.x<a.x+b.w && a.x+a.w>b.x && a.y<a.y+b.h && 
 function update(){
   if(gameWon||gameOver) return;
 
-  if(keys['ArrowLeft']||touchKeys.ArrowLeft) player.vx=-player.speed;
-  if(keys['ArrowRight']||touchKeys.ArrowRight) player.vx=player.speed;
+  if (keys['ArrowLeft']) {
+  player.vx = -player.speed;
+} else if (keys['ArrowRight']) {
+  player.vx = player.speed;
+} else {
+  player.vx = 0;
+}
   if((keys['ArrowUp']||touchKeys.ArrowUp)&&player.onGround){player.vy=-player.jump; player.onGround=false;}
 
   player.vy+=GRAVITY; player.x+=player.vx; player.y+=player.vy; player.vx*=FRICTION;
